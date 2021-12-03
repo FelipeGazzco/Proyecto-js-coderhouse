@@ -25,11 +25,26 @@ boton.onclick = () => {
         console.log("Almacenaje vacio");
     }else{
         array1 = JSON.parse(localStorage.getItem("arrayGuardado"));
-        console.log(array1);
+        console.log("+1");
     }
     array1.push(new Personaje(uno, dos, tres));
     localStorage.setItem("arrayGuardado", JSON.stringify(array1));
     console.log(array1);
+    for (const Personaje of array1) {
+        let contenedor = document.createElement("div");
+        contenedor.innerHTML = `<h3>${Personaje.nombre}</h3>
+                                <p>${Personaje.origen}</p>
+                                <p>${Personaje.ocupacion}</p>`;
+        document.body.appendChild(contenedor);
+    }
+    for (const Item of array1) {
+        let contenedor = document.createElement("div");
+        contenedor.innerHTML = `<h3>${Item.nombre2}</h3>
+                                <p>${Item.origen2}</p>
+                                <p>${Item.uso}</p>`;
+        document.body.appendChild(contenedor);
+    }
+
     /*array2.push(new Item(uno, cuatro, cinco));
     //listaItems.push(new Item(uno, cuatro, cinco));)
     guardarProd("array2", JSON.stringify(array2));
@@ -53,11 +68,26 @@ boton1.onclick = () => {
         console.log("Almacenaje vacio");
     }else{
         array1 = JSON.parse(localStorage.getItem("arrayGuardado"));
-        console.log(array1);
+        console.log("+1");
     }
     array1.push(new Item(uno, dos, tres));
     localStorage.setItem("arrayGuardado", JSON.stringify(array1));
     console.log(array1);
+    for (const Personaje of array1) {
+        let contenedor = document.createElement("div");
+        contenedor.innerHTML = `<h3>${Personaje.nombre}</h3>
+                                <p>${Personaje.origen}</p>
+                                <p>${Personaje.ocupacion}</p>`;
+        document.body.appendChild(contenedor);
+    }
+    for (const Item of array1) {
+        let contenedor = document.createElement("div");
+        contenedor.innerHTML = `<h3>${Item.nombre2}</h3>
+                                <p>${Item.origen2}</p>
+                                <p>${Item.uso}</p>`;
+        document.body.appendChild(contenedor);
+    }
+
     /*let almacenados = JSON.parse(localStorage.getItem("array2"));
     for (const Item of almacenados) {
         let contenedor = document.createElement("div");
