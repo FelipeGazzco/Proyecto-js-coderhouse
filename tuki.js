@@ -1,4 +1,5 @@
 let array1 = [];
+let array2 = [];
 
 class Personaje{
     constructor(nombre, origen, ocupacion){
@@ -30,33 +31,6 @@ boton.onclick = () => {
     array1.push(new Personaje(uno, dos, tres));
     localStorage.setItem("arrayGuardado", JSON.stringify(array1));
     console.log(array1);
-    for (const Personaje of array1) {
-        let contenedor = document.createElement("div");
-        contenedor.innerHTML = `<h3>${Personaje.nombre}</h3>
-                                <p>${Personaje.origen}</p>
-                                <p>${Personaje.ocupacion}</p>`;
-        document.body.appendChild(contenedor);
-    }
-    for (const Item of array1) {
-        let contenedor = document.createElement("div");
-        contenedor.innerHTML = `<h3>${Item.nombre2}</h3>
-                                <p>${Item.origen2}</p>
-                                <p>${Item.uso}</p>`;
-        document.body.appendChild(contenedor);
-    }
-
-    /*array2.push(new Item(uno, cuatro, cinco));
-    //listaItems.push(new Item(uno, cuatro, cinco));)
-    guardarProd("array2", JSON.stringify(array2));
-    let almacenados = JSON.parse(localStorage.getItem("array2"));
-    for (const Item of almacenados) {
-        let contenedor = document.createElement("div");
-        contenedor.innerHTML = `<h3>${Item.nombre}</h3>
-                                <p>${Item.origen}</p>
-                                <p>${Item.uso}</p>`;
-        document.body.appendChild(contenedor);
-    }
-    console.log(array2);*/
 };
 
 let boton1 = document.getElementById("terminarItem");
@@ -64,38 +38,21 @@ boton1.onclick = () => {
     let uno = document.getElementById("nombre2").value;
     let dos = document.getElementById("origen2").value;
     let tres = document.getElementById("uso").value;
-    if (localStorage.getItem("arrayGuardado") === null) {
+    if (localStorage.getItem("arrayGuardado2") === null) {
         console.log("Almacenaje vacio");
     }else{
-        array1 = JSON.parse(localStorage.getItem("arrayGuardado"));
+        array2 = JSON.parse(localStorage.getItem("arrayGuardado2"));
         console.log("+1");
     }
-    array1.push(new Item(uno, dos, tres));
-    localStorage.setItem("arrayGuardado", JSON.stringify(array1));
-    console.log(array1);
-    for (const Personaje of array1) {
-        let contenedor = document.createElement("div");
-        contenedor.innerHTML = `<h3>${Personaje.nombre}</h3>
-                                <p>${Personaje.origen}</p>
-                                <p>${Personaje.ocupacion}</p>`;
-        document.body.appendChild(contenedor);
+    array2.push(new Item(uno, dos, tres));
+    localStorage.setItem("arrayGuardado2", JSON.stringify(array2));
+    console.log(array2);
+    for (const Item of array2) {
+        $(".gridColeccion").append(`<div><h3> ${Item.nombre}</h3>
+                  <p>  Origen: ${Item.origen}</p>
+                  <b> Uso: ${Item.uso}</b></div>`);
     }
-    for (const Item of array1) {
-        let contenedor = document.createElement("div");
-        contenedor.innerHTML = `<h3>${Item.nombre2}</h3>
-                                <p>${Item.origen2}</p>
-                                <p>${Item.uso}</p>`;
-        document.body.appendChild(contenedor);
-    }
-
-    /*let almacenados = JSON.parse(localStorage.getItem("array2"));
-    for (const Item of almacenados) {
-        let contenedor = document.createElement("div");
-        contenedor.innerHTML = `<h3>${Item.nombre}</h3>
-                                <p>${Item.origen}</p>
-                                <p>${Item.uso}</p>`;
-        document.body.appendChild(contenedor);
-    }
-    console.log(array2);*/
 };
+
+
 
