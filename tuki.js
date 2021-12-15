@@ -53,6 +53,6 @@ boton1.onclick = () => {
 
 let boton2 = document.getElementById("intento1");
 boton2.onclick = () => {
-    $(".navigator").fadeIn(setTimeout(function(){$(".navigator").fadeOut()}, 5000));
-    $("#intento1").hide(setTimeout(function(){$("#intento1").fadeIn()}, 5300));
+    $(".navigator").fadeIn(setTimeout(function(){$(".navigator").fadeOut()}, 4000));
+    $("#intento1").hide(setTimeout(function(){$("#intento1").fadeIn()}, 4300));
 }
