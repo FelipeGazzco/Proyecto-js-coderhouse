@@ -31,6 +31,7 @@ boton.onclick = () => {
     array1.push(new Personaje(uno, dos, tres));
     localStorage.setItem("arrayGuardado", JSON.stringify(array1));
     console.log(array1);
+    document.location.reload()
 };
 
 let boton1 = document.getElementById("terminarItem");
@@ -47,12 +48,11 @@ boton1.onclick = () => {
     array2.push(new Item(uno, dos, tres));
     localStorage.setItem("arrayGuardado2", JSON.stringify(array2));
     console.log(array2);
-    for (const Item of array2) {
-        $(".gridColeccion").append(`<div><h3> ${Item.nombre}</h3>
-                  <p>  Origen: ${Item.origen}</p>
-                  <b> Uso: ${Item.uso}</b></div>`);
-    }
+    document.location.reload()
 };
 
-
-
+let boton2 = document.getElementById("intento1");
+boton2.onclick = () => {
+    $(".navigator").fadeIn(setTimeout(function(){$(".navigator").fadeOut()}, 5000));
+    $("#intento1").hide(setTimeout(function(){$("#intento1").fadeIn()}, 5300));
+}
