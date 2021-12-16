@@ -40,6 +40,8 @@ body{
                     color: white;
                     text-decoration: none;
                     list-style: none;
+                    margin: 1%;
+                    margin-left: 2%;
                     a{
                         text-decoration: none;
                         color: white;
@@ -59,8 +61,12 @@ body{
             display: flex;
             flex-direction: row;
             align-items:flex-start;
+            width: 90%;
             justify-content: space-evenly;
             .listaColeccion{
+                display: grid;
+                grid-template-columns: 1fr, 1fr;
+                grid-template-rows: auto;
                 li{
                     background-color: #94B5C0;
                     display: flex;
@@ -74,6 +80,10 @@ body{
                 }
             }
             .listaColeccion2{
+                display: grid;
+                grid-template-columns: 1fr, 1fr;
+                grid-template-rows: auto;
+                margin-left: 1%;
                 li{
                     background-color: #94B5C0;
                     display: flex;
