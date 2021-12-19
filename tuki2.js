@@ -4,6 +4,7 @@ if (localStorage.getItem("arrayGuardado") === null) {
     array1 = JSON.parse(localStorage.getItem("arrayGuardado"));
     for (const Personaje of array1) {
         $(".listaColeccion").append(`<li><h3> ${Personaje.nombre}</h3>
+                  <div> ${Personaje.archivo}</div>
                   <p> Origen: ${Personaje.origen}</p>
                   <p> Ocupacion: ${Personaje.ocupacion}</p>
                   <p> Costo: ${Personaje.costo}<p></li>`);
@@ -16,6 +17,7 @@ if (localStorage.getItem("arrayGuardado2") === null) {
     array2 = JSON.parse(localStorage.getItem("arrayGuardado2"));
     for (const Item of array2) {
         $(".listaColeccion2").append(`<li><h3> ${Item.nombre}</h3>
+                  <div> ${Item.archivo}</div>
                   <p>  Origen: ${Item.origen}</p>
                   <p> Uso: ${Item.uso}</p>
                   <p> Costo: ${Item.costo}<p></li>`);
