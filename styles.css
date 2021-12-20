@@ -102,6 +102,23 @@ body main {
   padding: 2%;
 }
 
+body main #statik {
+  position: fixed;
+  background-color: #9eaa5c;
+  border: goldenrod;
+  border-width: 3px;
+  width: 200px;
+  height: 50px;
+  top: 40%;
+  left: 77%;
+}
+
+@media (max-width: 700px) {
+  body main #statik {
+    position: inherit;
+  }
+}
+
 body main section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -176,7 +193,7 @@ body main section .listaColeccion2 li {
           justify-content: space-evenly;
   text-align: center;
   width: 200px;
-  height: 100px;
+  height: 200px;
   margin-top: 2%;
 }
 
@@ -262,7 +279,8 @@ body main article form div .otroInput {
 }
 
 body footer {
-  background-color: #B4A5A5;
+  color: white;
+  background-color: #806e6e;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -279,6 +297,8 @@ body footer {
 }
 
 body footer div {
+  margin: 1%;
+  width: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -289,5 +309,20 @@ body footer div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+body footer div img {
+  margin: 1%;
+  width: 40%;
+}
+
+body footer div iframe {
+  width: 60%;
+  height: 60%;
+}
+
+body footer div ul {
+  margin: 1%;
+  list-style: none;
 }
 /*# sourceMappingURL=styles.css.map */

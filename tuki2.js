@@ -38,4 +38,9 @@ $("#intento1").click(function() {
    
     });
    
-   })
+})
+
+let plata2 = localStorage.getItem("plataGuardada");
+
+$("#statik").append(`<div><h3>Plata a disposicion</h3>
+                  <p>Actual: ${plata2 * 100}</p></div>`);

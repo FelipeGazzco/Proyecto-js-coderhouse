@@ -57,6 +57,19 @@ body{
         align-items: center;
         background-color: #00303F;
         padding: 2%;
+        #statik{
+            position: fixed;
+            background-color: rgb(158, 170, 92);
+            border: goldenrod;
+            border-width: 3px;
+            width: 200px;
+            height:50px;
+            top: 40%;
+            left: 77%;
+            @media (max-width: 700px) {
+              position: inherit;
+            }
+        }
         section{
             display: flex;
             flex-direction: row;
@@ -92,7 +105,7 @@ body{
                     justify-content: space-evenly;
                     text-align: center;
                     width: 200px;
-                    height: 100px;
+                    height: 200px;
                     margin-top: 2%;
                 }
             }
@@ -142,15 +155,30 @@ body{
         }
     }
     footer{
-        background-color: #B4A5A5;
+        color: white;
+        background-color: #806e6e;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
         div{
+            margin: 1%;
+            width: 30%;
             display: flex;
             flex-direction: column;
             align-items: center;
+            img{
+                margin: 1%;
+                width: 40%;
+            }
+            iframe{
+                width: 60%;
+                height: 60%;
+            }
+            ul{
+                margin: 1%;
+                list-style: none;
+            }
         }
     }
 }

@@ -38,6 +38,15 @@ boton.onclick = () => {
     localStorage.setItem("arrayGuardado", JSON.stringify(array1));
     console.log(array1);
     document.location.reload()
+    if (localStorage.getItem("plataGuardada") === null) {
+        let plata = 0
+        plata++; 
+        localStorage.setItem("plataGuardada", plata);
+    }else{
+        let plata = localStorage.getItem("plataGuardada");
+        plata++;
+        localStorage.setItem("plataGuardada", plata);
+    }
 };
 
 let boton1 = document.getElementById("terminarItem");
@@ -57,6 +66,15 @@ boton1.onclick = () => {
     localStorage.setItem("arrayGuardado2", JSON.stringify(array2));
     console.log(array2);
     document.location.reload()
+    if (localStorage.getItem("plataGuardada") === null) {
+        let plata = 0
+        plata++; 
+        localStorage.setItem("plataGuardada", plata);
+    }else{
+        let plata = localStorage.getItem("plataGuardada");
+        plata++;
+        localStorage.setItem("plataGuardada", plata);
+    }
 };
 
 $("#intento1").click(function() {
@@ -67,4 +85,8 @@ $("#intento1").click(function() {
    
     });
    
-   })
+})
+
+let plata = localStorage.getItem("plataGuardada");
+$("#statik").append(`<div><h3>Puntos a disposicion</h3>
+                  <p>Actual: ${plata * 100}</p></div>`);
