@@ -60,11 +60,13 @@ body{
         #statik{
             position: fixed;
             background-color: rgb(158, 170, 92);
-            border: goldenrod;
-            border-width: 3px;
+            border: rgb(187, 211, 156);
+            border-style: solid;
+            border-width: 2px;
+            border-radius: 5px;
             width: 200px;
             height:50px;
-            top: 40%;
+            top: 30%;
             left: 77%;
             @media (max-width: 700px) {
               position: inherit;
