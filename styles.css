@@ -38,7 +38,6 @@ body header #intento1 {
   width: 50px;
   height: 50px;
   border-radius: 2px;
-  background-image: url(https://cdn-icons-png.flaticon.com/512/1384/1384172.png);
 }
 
 body header nav {
@@ -136,6 +135,66 @@ body main section {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+body main section .tiendaDiv {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr, 1fr;
+      grid-template-columns: 1fr, 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+}
+
+body main section .tiendaDiv div {
+  background-color: #94B5C0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  margin-top: 2%;
+}
+
+body main section .tiendaDiv2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr, 1fr;
+      grid-template-columns: 1fr, 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+}
+
+body main section .tiendaDiv2 div {
+  background-color: #94B5C0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  margin-top: 2%;
 }
 
 body main section .listaColeccion {
