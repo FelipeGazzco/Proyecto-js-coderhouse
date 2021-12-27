@@ -35,8 +35,8 @@ body header img {
 }
 
 body header #intento1 {
-  width: 50px;
-  height: 50px;
+  width: 0px;
+  height: 0px;
   border-radius: 2px;
 }
 
@@ -137,16 +137,23 @@ body main section {
           justify-content: space-evenly;
 }
 
-body main section .tiendaDiv {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr, 1fr;
-      grid-template-columns: 1fr, 1fr;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
+body main section .masvendido {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
-body main section .tiendaDiv div {
+body main section .masvendido div {
   background-color: #94B5C0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -162,38 +169,7 @@ body main section .tiendaDiv div {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   text-align: center;
-  width: 200px;
-  height: 200px;
-  margin-top: 2%;
-}
-
-body main section .tiendaDiv2 {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr, 1fr;
-      grid-template-columns: 1fr, 1fr;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-}
-
-body main section .tiendaDiv2 div {
-  background-color: #94B5C0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  text-align: center;
-  width: 200px;
-  height: 200px;
+  margin: 0%;
   margin-top: 2%;
 }
 
@@ -276,6 +252,23 @@ body main div {
   text-align: center;
   color: white;
   margin-right: 4%;
+}
+
+body main .article2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50%, 50%;
+      grid-template-columns: 50%, 50%;
+  -ms-grid-rows: 200px, 200px, 200px, 200px;
+      grid-template-rows: 200px, 200px, 200px, 200px;
+}
+
+body main .article2 input {
+  width: 100px;
+}
+
+body main .article2 img {
+  width: 100px;
 }
 
 body main article {
