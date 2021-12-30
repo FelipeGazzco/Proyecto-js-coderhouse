@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda</title>
     <link rel="stylesheet" href="../styles.css">
+    <link rel="shortcut icon" href="">
 </head>
 <body>
     <header>
@@ -23,16 +24,18 @@
         </nav>
     </header>
     <main>
-        <section>
+        <sectio class="sectionEspecifica">
+            <div><p><strong>Ventas mas relevantes:</strong></p></div>
             <div class="masvendido"></div>
         </section>
         <div>
             <h1>Tienda</h1>
             <p>Adquiere alguno de los personajes e items creados por otros usuarios como vos.</p>
+            <p>Para conseguir puntos, deberas crear algunos objetos propios. Cada creacion te da 100 puntos.</p>
         </div>
         <div id="statik"></div>
         <article class="article2">
-            <div>
+            <div id="rick">
                 <p><strong>Nombre: Rick</strong></p>
                 <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="rickpic">
                 <p>Origen: Tierra, C 137</p>
@@ -40,7 +43,7 @@
                 <p>Precio: 1000</p>
                 <input type="submit" name="comprar1" id="comprar1" onclick="comprar1()" value="Comprar">
             </div>
-            <div>
+            <div id="julio">
                 <p><strong>Nombre: Julio cesar</strong></p>
                 <img src="https://canalhistoria.es/wp-content/uploads/2019/02/julio-cesar.jpg" alt="cesarpic">
                 <p>Origen: Italia</p>
@@ -48,7 +51,7 @@
                 <p>Precio: 300</p>
                 <input type="submit" name="comprar2" id="comprar2" onclick="comprar2()" value="Comprar">
             </div>
-            <div>
+            <div id="chungus">
                 <p><strong>Nombre: Big Chungus</strong></p>
                 <img src="../221d9dea5bed3ecd731606df30f82ea3.jpg" alt="chunguspic">
                 <p>Origen: ?</p>
@@ -56,7 +59,7 @@
                 <p>Precio: 80000</p>
                 <input type="submit" name="comprar3" id="comprar3" onclick="comprar3()" value="Comprar">
             </div>
-            <div>
+            <div id="asterix">
                 <p><strong>Nombre: Asterix</strong></p>
                 <img src="https://www.asterix.com/illus/asterix-de-a-a-z/les-personnages/perso/g09b.gif" alt="asterixpic">
                 <p>Origen: Galia, Francia</p>
@@ -64,7 +67,7 @@
                 <p>Precio: 500</p>
                 <input type="submit" name="comprar4" id="comprar4" onclick="comprar4()" value="Comprar">
             </div>
-            <div>
+            <div id="leagueoflegends">
                 <p><strong>Nombre: Thresh</strong></p>
                 <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Thresh_0.jpg" alt="threshpic">
                 <p>Origen: Islas de las sombras, Runaterra</p>
@@ -72,7 +75,7 @@
                 <p>Precio: 480</p>
                 <input type="submit" name="comprar5" value="Comprar" id="comprar5" onclick="comprar5()">
             </div>
-            <div>
+            <div id="peteparker">
                 <p><strong>Nombre: Spiderman</strong></p>
                 <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_1440x810/public/media/image/2020/10/marvels-spider-man-remastered-2109699.jpg?h=ddc58dd3&itok=qjT-2jMm" alt="spiderpic">
                 <p>Origen: Nueva York</p>
@@ -80,7 +83,7 @@
                 <p>Precio: 250</p>
                 <input type="submit" name="comprar6" value="Comprar" id="comprar6" onclick="comprar6()">
                 </div>
-            <div>
+            <div id="fullmetal">
                 <p><strong>Nombre: Shou Tucker</strong></p>
                 <img src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2019/11/Shou-Tucker.jpg?q=50&fit=crop&w=740&h=370&dpr=1.5" alt="shpupic">
                 <p>Origen: Amestris</p>
@@ -88,7 +91,7 @@
                 <p>Precio: 0</p>
                 <input type="submit" name="comprar7" value="Comprar" id="comprar7" onclick="comprar7()">
             </div>
-            <div>
+            <div id="assasin">
                 <p><strong>Nombre: Connor Kenway, Ratonhnhaké:ton</strong></p>
                 <img src="https://pm1.narvii.com/6601/9b5c56ebd508f350ab601fd43af940cf954c925c_128.jpg" alt="connorpic">
                 <p>Origen: Mohawk Valley, Estados Unidos</p>

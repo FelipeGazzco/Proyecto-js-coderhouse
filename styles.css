@@ -120,24 +120,23 @@ body main #statik {
   }
 }
 
-body main section {
+body main .sectionEspecifica {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  width: 90%;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-body main section .masvendido {
+body main .sectionEspecifica .masvendido {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,7 +152,7 @@ body main section .masvendido {
           justify-content: space-evenly;
 }
 
-body main section .masvendido div {
+body main .sectionEspecifica .masvendido div {
   background-color: #94B5C0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -169,8 +168,26 @@ body main section .masvendido div {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   text-align: center;
-  margin: 0%;
+  margin: 1%;
   margin-top: 2%;
+  width: 15%;
+}
+
+body main section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 90%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 body main section .listaColeccion {

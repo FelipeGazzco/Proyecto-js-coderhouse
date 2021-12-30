@@ -19,17 +19,6 @@ $.get(URL_PERSONAJES2, (data, status) => {
     }
 });
 
-function consume2() {
-    alert('Se ha dado clic al botón!');
-    let abcd2 = localStorage.getItem("plataGuardada");
-    if (abcd2 >= 3.5) {
-        let abcd22 = abcd2 -3.5;
-        localStorage.setItem("plataGuardada", abcd22);
-    }else{
-        alert("Imposible")
-    }
-    documen.location.reload();
-}
 
 let plata3 = localStorage.getItem("plataGuardada");
 
