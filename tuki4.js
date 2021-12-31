@@ -8,13 +8,19 @@ class Personaje{
     }
 }
 
+class ID{
+    constructor(id){
+        this.id = id;
+    }
+}
+
 class Item{
     constructor(nombre2, archivo2, origen2, uso, costo2){
-        this.nombre = nombre2
-        this.archivo = archivo2
-        this.origen = origen2
-        this.uso = uso
-        this.costo = costo2
+        this.nombre = nombre2;
+        this.archivo = archivo2;
+        this.origen = origen2;
+        this.uso = uso;
+        this.costo = costo2;
     }
 }
 
@@ -57,9 +63,17 @@ compra1.onclick = () => {
         }
         let platanueva = localStorage.getItem("plataGuardada") - 10;
         localStorage.setItem("plataGuardada", platanueva);
-        document.location.reload();
-        var e = document.getElementById("rick");
-        e.remove();
+        if (localStorage.getItem("arrayID") === null) {
+            let arrayidnoalmacen = [];
+            let id = "rick"
+            arrayidnoalmacen.push(new ID(id));
+            localStorage.setItem("arrayID", arrayidnoalmacen);
+        } else{
+            let arrayidnoalmacen = localStorage.getItem("arrayID");
+            let id = "rick"
+            arrayidnoalmacen.push(new ID(id));
+            localStorage.setItem("arrayID", arrayidnoalmacen);
+        }
     }else{
         alert("Imposible");
     }
@@ -88,9 +102,17 @@ compra2.onclick = () => {
         }
         let platanueva = localStorage.getItem("plataGuardada") - 3;
         localStorage.setItem("plataGuardada", platanueva);
-        document.location.reload();
-        var e = document.getElementById("julio");
-        e.remove();
+        if (localStorage.getItem("arrayID") === null) {
+            let arrayidnoalmacen = [];
+            let id = "julio"
+            arrayidnoalmacen.push(new ID(id));
+            localStorage.setItem("arrayID", arrayidnoalmacen);
+        } else{
+            let arrayidnoalmacen = localStorage.getItem("arrayID");
+            let id = "julio"
+            arrayidnoalmacen.push(new ID(id));
+            localStorage.setItem("arrayID", arrayidnoalmacen);
+        }
     }else{
         alert("Imposible");
     }
@@ -119,9 +141,17 @@ compra3.onclick = () => {
         }
         let platanueva = localStorage.getItem("plataGuardada") - 800;
         localStorage.setItem("plataGuardada", platanueva);
-        document.location.reload();
-        var e = document.getElementById("chungus");
-        d.removeChild(e);
+        if (localStorage.getItem("arrayID") === null) {
+            let arrayidnoalmacen = [];
+            let id = "chungus"
+            arrayidnoalmacen.push(new ID(id));
+            localStorage.setItem("arrayID", arrayidnoalmacen);
+        } else{
+            let arrayidnoalmacen = localStorage.getItem("arrayID");
+            let id = "chungus"
+            arrayidnoalmacen.push(new ID(id));
+            localStorage.setItem("arrayID", arrayidnoalmacen);
+        }
     }else{
         alert("Imposible");
     }
@@ -150,9 +180,17 @@ compra4.onclick = () => {
         }
         let platanueva = localStorage.getItem("plataGuardada") - 5;
         localStorage.setItem("plataGuardada", platanueva);
-        document.location.reload();
-        var e = document.getElementById("asterix");
-        d.removeChild(e);
+        if (localStorage.getItem("arrayID") === null) {
+            let arrayidnoalmacen = [];
+            let id = "asterix"
+            arrayidnoalmacen.push(new ID(id));
+            localStorage.setItem("arrayID", arrayidnoalmacen);
+        } else{
+            let arrayidnoalmacen = localStorage.getItem("arrayID");
+            let id = "asterix"
+            arrayidnoalmacen.push(new ID(id));
+            localStorage.setItem("arrayID", arrayidnoalmacen);
+        }
     }else{
         alert("Imposible");
     }
@@ -181,9 +219,17 @@ compra5.onclick = () => {
         }
         let platanueva = localStorage.getItem("plataGuardada") - 4.8;
         localStorage.setItem("plataGuardada", platanueva);
-        document.location.reload();
-        var e = document.getElementById("leagueoflegends");
-        d.removeChild(e);
+        if (localStorage.getItem("arrayID") === null) {
+            let arrayidnoalmacen = [];
+            let id = "leagueoflegends"
+            arrayidnoalmacen.push(new ID(id));
+            localStorage.setItem("arrayID", arrayidnoalmacen);
+        } else{
+            let arrayidnoalmacen = localStorage.getItem("arrayID");
+            let id = "leagueoflegends"
+            arrayidnoalmacen.push(new ID(id));
+            localStorage.setItem("arrayID", arrayidnoalmacen);
+        }
     }else{
         alert("Imposible");
     }
@@ -212,9 +258,17 @@ compra6.onclick = () => {
         }
         let platanueva = localStorage.getItem("plataGuardada") - 2.5;
         localStorage.setItem("plataGuardada", platanueva);
-        document.location.reload();
-        var e = document.getElementById("peteparker");
-        d.removeChild(e);
+        if (localStorage.getItem("arrayID") === null) {
+            let arrayidnoalmacen = [];
+            let id = "peteparker"
+            arrayidnoalmacen.push(new ID(id));
+            localStorage.setItem("arrayID", arrayidnoalmacen);
+        } else{
+            let arrayidnoalmacen = localStorage.getItem("arrayID");
+            let id = "peteparker"
+            arrayidnoalmacen.push(new ID(id));
+            localStorage.setItem("arrayID", arrayidnoalmacen);
+        }
     }else{
         alert("Imposible");
     }
@@ -243,9 +297,17 @@ compra7.onclick = () => {
         }
         let platanueva = localStorage.getItem("plataGuardada") - 0;
         localStorage.setItem("plataGuardada", platanueva);
-        document.location.reload();
-        var e = document.getElementById("fullmetal");
-        d.removeChild(e);
+        if (localStorage.getItem("arrayID") === null) {
+            let arrayidnoalmacen = [];
+            let id = "fullmetal"
+            arrayidnoalmacen.push(new ID(id));
+            localStorage.setItem("arrayID", arrayidnoalmacen);
+        } else{
+            let arrayidnoalmacen = localStorage.getItem("arrayID");
+            let id = "fullmetal"
+            arrayidnoalmacen.push(new ID(id));
+            localStorage.setItem("arrayID", arrayidnoalmacen);
+        }
     }else{
         alert("Imposible");
     }
@@ -274,9 +336,17 @@ compra8.onclick = () => {
         }
         let platanueva = localStorage.getItem("plataGuardada") -5;
         localStorage.setItem("plataGuardada", platanueva);
-        document.location.reload();
-        var e = document.getElementById("assasin");
-        d.removeChild(e);
+        if (localStorage.getItem("arrayID") === null) {
+            let arrayidnoalmacen = [];
+            let id = "assasin"
+            arrayidnoalmacen.push(new ID(id));
+            localStorage.setItem("arrayID", arrayidnoalmacen);
+        } else{
+            let arrayidnoalmacen = localStorage.getItem("arrayID");
+            let id = "assasin"
+            arrayidnoalmacen.push(new ID(id));
+            localStorage.setItem("arrayID", arrayidnoalmacen);
+        }
     }else{
         alert("Imposible");
     }
