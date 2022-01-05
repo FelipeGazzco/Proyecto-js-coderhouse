@@ -10,7 +10,7 @@ class Personaje{
 
 class ID{
     constructor(id){
-        this.id = id;
+        this.id = id.value;
     }
 }
 
@@ -33,321 +33,71 @@ let tienda5 = {nombre:"Spiderman", archivo:"https://cdn.hobbyconsolas.com/sites/
 let tienda6 = {nombre:"Shou Tucker", archivo:"https://static1.cbrimages.com/wordpress/wp-content/uploads/2019/11/Shou-Tucker.jpg?q=50&fit=crop&w=740&h=370&dpr=1.5", origen:"Amestris", ocupacion:"Alquimista, Criminal", precio:0};
 let tienda7 = {nombre:"Connor Kenway, Ratonhnhaké:ton", archivo:"https://pm1.narvii.com/6601/9b5c56ebd508f350ab601fd43af940cf954c925c_128.jpg", origen:"Mohawk Vallet, Estados Unidos", ocupacion:"Asesino, Cazador, Rebelde", precio:5};
 
-if (localStorage.getItem("arrayTiendal") === null){
+/*if (localStorage.getItem("arrayTiendal") === null){
     localStorage.setItem("arrayTiendal", [tienda0, tienda1, tienda2, tienda3, tienda4, tienda5, tienda6, tienda7]);
 }else{
     let arrayTienda = localStorage.getItem("arrayTiendal")
     console.log("2");
+}*/
+
+arrayDef = [];
+
+if(localStorage.getItem("chapadmalal") === null){
+    arrayDef.push(new Personaje(tienda0.nombre, tienda0.archivo, tienda0.origen, tienda0.ocupacion, tienda0.precio));
+    arrayDef.push(new Personaje(tienda1.nombre, tienda1.archivo, tienda1.origen, tienda1.ocupacion, tienda1.precio));
+    arrayDef.push(new Personaje(tienda2.nombre, tienda2.archivo, tienda2.origen, tienda2.ocupacion, tienda2.precio));
+    arrayDef.push(new Personaje(tienda3.nombre, tienda3.archivo, tienda3.origen, tienda3.ocupacion, tienda3.precio));
+    arrayDef.push(new Personaje(tienda4.nombre, tienda4.archivo, tienda4.origen, tienda4.ocupacion, tienda4.precio));
+    arrayDef.push(new Personaje(tienda5.nombre, tienda5.archivo, tienda5.origen, tienda5.ocupacion, tienda5.precio));
+    arrayDef.push(new Personaje(tienda6.nombre, tienda6.archivo, tienda6.origen, tienda6.ocupacion, tienda6.precio));
+    arrayDef.push(new Personaje(tienda7.nombre, tienda7.archivo, tienda7.origen, tienda7.ocupacion, tienda7.precio));
+    localStorage.setItem("chapadmalal", JSON.stringify(arrayDef));
+    let perso = JSON.parse(JSON.stringify(localStorage.getItem("chapadmalal")));
+}else{
+    console.log("array tienda ya creado");
+    let perso = (localStorage.getItem("chapadmalal"));
+}
+let count = 0;
+for(const Personaje in JSON.parse(localStorage.getItem("chapadmalal"))){
+    let contenedor = document.createElement("div");
+    contenedor.innerHTML = `
+    <div>
+        <p>Nombre: ${Personaje.nombre}</p>
+        <img src="${Personaje.archivo}" width="100px">
+        <p>Origen: ${Personaje.origen} </p>
+        <p>Ocupacion: ${Personaje.ocupacion} </p>
+        <p>Precio: ${Personaje.costo} </p>
+        <input type="submit" name="compra${count}" value="Comprar" id="comprar${count}" onclick="comprar${count}()">
+    </div>
+    `
+    document.body.appendChild(contenedor);
+    count ++;
 }
 
-let compra1 = document.getElementById("comprar1");
-compra1.onclick = () => {
-    if (localStorage.getItem("plataGuardada") >= tienda0.precio) {
-        let uno = tienda0.nombre;
-        let dos = tienda0.archivo;
-        let tres = tienda0.origen;
-        let cuatro = tienda0.ocupacion;
-        let cinco = tienda0.precio * 100;
-        if (localStorage.getItem("arrayGuardado") === null) {
-            console.log("Almacen vacio");  
-            let array1 = [];
-            array1.push(new Personaje(uno, dos, tres, cuatro, cinco));
-            localStorage.setItem("arrayGuardado", JSON.stringify(array1));
-            console.log(array1);  
-        }else{
-            array1 = JSON.parse(localStorage.getItem("arrayGuardado"));
-            console.log("+1");
-            array1.push(new Personaje(uno, dos, tres, cuatro, cinco));
-            localStorage.setItem("arrayGuardado", JSON.stringify(array1));
-            console.log(array1);
-        }
-        let platanueva = localStorage.getItem("plataGuardada") - 10;
-        localStorage.setItem("plataGuardada", platanueva);
-        if (localStorage.getItem("arrayID") === null) {
-            let arrayidnoalmacen = [];
-            let id = "rick"
-            arrayidnoalmacen.push(new ID(id));
-            localStorage.setItem("arrayID", arrayidnoalmacen);
-        } else{
-            let arrayidnoalmacen = localStorage.getItem("arrayID");
-            let id = "rick"
-            arrayidnoalmacen.push(new ID(id));
-            localStorage.setItem("arrayID", arrayidnoalmacen);
-        }
-    }else{
-        alert("Imposible");
+/*let cero = 0
+let perso = JSON.parse(JSON.stringify(localStorage.getItem("chapadmalal")));
+if (cero = 0) {
+    for(const Personaje in perso){
+        $(".article2").append(`
+        <div>
+            <p>Nombre: ${Personaje.nombre}</p>
+            <img src="${Personaje.archivo}" width="100px">
+            <p>Origen: ${Personaje.origen} </p>
+            <p>Ocupacion: ${Personaje.ocupacion} </p>
+            <p>Precio: ${Personaje.costo} </p>
+        </div>
+        `);
     }
-}
+}*/
 
-let compra2 = document.getElementById("comprar2");
-compra2.onclick = () => {
-    if (localStorage.getItem("plataGuardada") >= tienda1.precio) {
-        let uno = tienda1.nombre;
-        let dos = tienda1.archivo;
-        let tres = tienda1.origen;
-        let cuatro = tienda1.ocupacion;
-        let cinco = tienda1.precio * 100;
-        if (localStorage.getItem("arrayGuardado") === null) {
-            console.log("Almacen vacio"); 
-            let array1 = [];   
-            array1.push(new Personaje(uno, dos, tres, cuatro, cinco));
-            localStorage.setItem("arrayGuardado", JSON.stringify(array1));
-            console.log(array1);
-        }else{
-            array1 = JSON.parse(localStorage.getItem("arrayGuardado"));
-            console.log("+1");
-            array1.push(new Personaje(uno, dos, tres, cuatro, cinco));
-            localStorage.setItem("arrayGuardado", JSON.stringify(array1));
-            console.log(array1);
-        }
-        let platanueva = localStorage.getItem("plataGuardada") - 3;
-        localStorage.setItem("plataGuardada", platanueva);
-        if (localStorage.getItem("arrayID") === null) {
-            let arrayidnoalmacen = [];
-            let id = "julio"
-            arrayidnoalmacen.push(new ID(id));
-            localStorage.setItem("arrayID", arrayidnoalmacen);
-        } else{
-            let arrayidnoalmacen = localStorage.getItem("arrayID");
-            let id = "julio"
-            arrayidnoalmacen.push(new ID(id));
-            localStorage.setItem("arrayID", arrayidnoalmacen);
-        }
-    }else{
-        alert("Imposible");
-    }
-}
+/*$(".article2").append(`
+<div>
+    <p>Nombre: ${Personaje.nombre}</p>
+    <img src="${Personaje.archivo}" width="100px">
+    <p>Origen: ${Personaje.origen} </p>
+    <p>Ocupacion: ${Personaje.ocupacion} </p>
+    <p>Precio: ${Personaje.costo} </p>
+</div>
+`);*/
 
-let compra3 = document.getElementById("comprar3");
-compra3.onclick = () => {
-    if (localStorage.getItem("plataGuardada") >= tienda2.precio) {
-        let uno = tienda2.nombre;
-        let dos = tienda2.archivo;
-        let tres = tienda2.origen;
-        let cuatro = tienda2.ocupacion;
-        let cinco = tienda2.precio * 100;
-        if (localStorage.getItem("arrayGuardado") === null) {
-            console.log("Almacen vacio"); 
-            let array1 = [];  
-            array1.push(new Personaje(uno, dos, tres, cuatro, cinco));
-            localStorage.setItem("arrayGuardado", JSON.stringify(array1));
-            console.log(array1);
-        }else{
-            array1 = JSON.parse(localStorage.getItem("arrayGuardado"));
-            console.log("+1");
-            array1.push(new Personaje(uno, dos, tres, cuatro, cinco));
-            localStorage.setItem("arrayGuardado", JSON.stringify(array1));
-            console.log(array1);
-        }
-        let platanueva = localStorage.getItem("plataGuardada") - 800;
-        localStorage.setItem("plataGuardada", platanueva);
-        if (localStorage.getItem("arrayID") === null) {
-            let arrayidnoalmacen = [];
-            let id = "chungus"
-            arrayidnoalmacen.push(new ID(id));
-            localStorage.setItem("arrayID", arrayidnoalmacen);
-        } else{
-            let arrayidnoalmacen = localStorage.getItem("arrayID");
-            let id = "chungus"
-            arrayidnoalmacen.push(new ID(id));
-            localStorage.setItem("arrayID", arrayidnoalmacen);
-        }
-    }else{
-        alert("Imposible");
-    }
-}
 
-let compra4 = document.getElementById("comprar4");
-compra4.onclick = () => {
-    if (localStorage.getItem("plataGuardada") >= tienda3.precio) {
-        let uno = tienda3.nombre;
-        let dos = tienda3.archivo;
-        let tres = tienda3.origen;
-        let cuatro = tienda3.ocupacion;
-        let cinco = tienda3.precio * 100;
-        if (localStorage.getItem("arrayGuardado") === null) {
-            console.log("Almacen vacio");
-            let array1 = [];
-            array1.push(new Personaje(uno, dos, tres, cuatro, cinco));
-            localStorage.setItem("arrayGuardado", JSON.stringify(array1));
-            console.log(array1);
-        }else{
-            array1 = JSON.parse(localStorage.getItem("arrayGuardado"));
-            console.log("+1");
-            array1.push(new Personaje(uno, dos, tres, cuatro, cinco));
-            localStorage.setItem("arrayGuardado", JSON.stringify(array1));
-            console.log(array1);
-        }
-        let platanueva = localStorage.getItem("plataGuardada") - 5;
-        localStorage.setItem("plataGuardada", platanueva);
-        if (localStorage.getItem("arrayID") === null) {
-            let arrayidnoalmacen = [];
-            let id = "asterix"
-            arrayidnoalmacen.push(new ID(id));
-            localStorage.setItem("arrayID", arrayidnoalmacen);
-        } else{
-            let arrayidnoalmacen = localStorage.getItem("arrayID");
-            let id = "asterix"
-            arrayidnoalmacen.push(new ID(id));
-            localStorage.setItem("arrayID", arrayidnoalmacen);
-        }
-    }else{
-        alert("Imposible");
-    }
-}
-
-let compra5 = document.getElementById("comprar5");
-compra5.onclick = () => {
-    if (localStorage.getItem("plataGuardada") >= tienda4.precio) {
-        let uno = tienda4.nombre;
-        let dos = tienda4.archivo;
-        let tres = tienda4.origen;
-        let cuatro = tienda4.ocupacion;
-        let cinco = tienda4.precio * 100;
-        if (localStorage.getItem("arrayGuardado") === null) {
-            console.log("Almacen vacio");   
-            let array1 = [];
-            array1.push(new Personaje(uno, dos, tres, cuatro, cinco));
-            localStorage.setItem("arrayGuardado", JSON.stringify(array1));
-            console.log(array1);
-        }else{
-            array1 = JSON.parse(localStorage.getItem("arrayGuardado"));
-            console.log("+1");
-            array1.push(new Personaje(uno, dos, tres, cuatro, cinco));
-            localStorage.setItem("arrayGuardado", JSON.stringify(array1));
-            console.log(array1);
-        }
-        let platanueva = localStorage.getItem("plataGuardada") - 4.8;
-        localStorage.setItem("plataGuardada", platanueva);
-        if (localStorage.getItem("arrayID") === null) {
-            let arrayidnoalmacen = [];
-            let id = "leagueoflegends"
-            arrayidnoalmacen.push(new ID(id));
-            localStorage.setItem("arrayID", arrayidnoalmacen);
-        } else{
-            let arrayidnoalmacen = localStorage.getItem("arrayID");
-            let id = "leagueoflegends"
-            arrayidnoalmacen.push(new ID(id));
-            localStorage.setItem("arrayID", arrayidnoalmacen);
-        }
-    }else{
-        alert("Imposible");
-    }
-}
-
-let compra6 = document.getElementById("comprar6");
-compra6.onclick = () => {
-    if (localStorage.getItem("plataGuardada") >= tienda5.precio) {
-        let uno = tienda5.nombre;
-        let dos = tienda5.archivo;
-        let tres = tienda5.origen;
-        let cuatro = tienda5.ocupacion;
-        let cinco = tienda5.precio * 100;
-        if (localStorage.getItem("arrayGuardado") === null) {
-            console.log("Almacen vacio");   
-            let array1 = [];
-            array1.push(new Personaje(uno, dos, tres, cuatro, cinco));
-            localStorage.setItem("arrayGuardado", JSON.stringify(array1));
-            console.log(array1);
-        }else{
-            array1 = JSON.parse(localStorage.getItem("arrayGuardado"));
-            console.log("+1");
-            array1.push(new Personaje(uno, dos, tres, cuatro, cinco));
-            localStorage.setItem("arrayGuardado", JSON.stringify(array1));
-            console.log(array1);
-        }
-        let platanueva = localStorage.getItem("plataGuardada") - 2.5;
-        localStorage.setItem("plataGuardada", platanueva);
-        if (localStorage.getItem("arrayID") === null) {
-            let arrayidnoalmacen = [];
-            let id = "peteparker"
-            arrayidnoalmacen.push(new ID(id));
-            localStorage.setItem("arrayID", arrayidnoalmacen);
-        } else{
-            let arrayidnoalmacen = localStorage.getItem("arrayID");
-            let id = "peteparker"
-            arrayidnoalmacen.push(new ID(id));
-            localStorage.setItem("arrayID", arrayidnoalmacen);
-        }
-    }else{
-        alert("Imposible");
-    }
-}
-
-let compra7 = document.getElementById("comprar7");
-compra7.onclick = () => {
-    if (localStorage.getItem("plataGuardada") >= tienda6.precio) {
-        let uno = tienda6.nombre;
-        let dos = tienda6.archivo;
-        let tres = tienda6.origen;
-        let cuatro = tienda6.ocupacion;
-        let cinco = tienda6.precio * 100;
-        if (localStorage.getItem("arrayGuardado") === null) {
-            console.log("Almacen vacio");
-            let array1 = [];     
-            array1.push(new Personaje(uno, dos, tres, cuatro, cinco));
-            localStorage.setItem("arrayGuardado", JSON.stringify(array1));
-            console.log(array1);
-        }else{
-            array1 = JSON.parse(localStorage.getItem("arrayGuardado"));
-            console.log("+1");
-            array1.push(new Personaje(uno, dos, tres, cuatro, cinco));
-            localStorage.setItem("arrayGuardado", JSON.stringify(array1));
-            console.log(array1);
-        }
-        let platanueva = localStorage.getItem("plataGuardada") - 0;
-        localStorage.setItem("plataGuardada", platanueva);
-        if (localStorage.getItem("arrayID") === null) {
-            let arrayidnoalmacen = [];
-            let id = "fullmetal"
-            arrayidnoalmacen.push(new ID(id));
-            localStorage.setItem("arrayID", arrayidnoalmacen);
-        } else{
-            let arrayidnoalmacen = localStorage.getItem("arrayID");
-            let id = "fullmetal"
-            arrayidnoalmacen.push(new ID(id));
-            localStorage.setItem("arrayID", arrayidnoalmacen);
-        }
-    }else{
-        alert("Imposible");
-    }
-}
-
-let compra8 = document.getElementById("comprar8");
-compra8.onclick = () => {
-    if (localStorage.getItem("plataGuardada") >= tienda7.precio) {
-        let uno = tienda7.nombre;
-        let dos = tienda7.archivo;
-        let tres = tienda7.origen;
-        let cuatro = tienda7.ocupacion;
-        let cinco = tienda7.precio * 100;
-        if (localStorage.getItem("arrayGuardado") === null) {
-            console.log("Almacen vacio"); 
-            let array1 = [];  
-            array1.push(new Personaje(uno, dos, tres, cuatro, cinco));
-            localStorage.setItem("arrayGuardado", JSON.stringify(array1));
-            console.log(array1);  
-        }else{
-            array1 = JSON.parse(localStorage.getItem("arrayGuardado"));
-            console.log("+1");
-            array1.push(new Personaje(uno, dos, tres, cuatro, cinco));
-            localStorage.setItem("arrayGuardado", JSON.stringify(array1));
-            console.log(array1);
-        }
-        let platanueva = localStorage.getItem("plataGuardada") -5;
-        localStorage.setItem("plataGuardada", platanueva);
-        if (localStorage.getItem("arrayID") === null) {
-            let arrayidnoalmacen = [];
-            let id = "assasin"
-            arrayidnoalmacen.push(new ID(id));
-            localStorage.setItem("arrayID", arrayidnoalmacen);
-        } else{
-            let arrayidnoalmacen = localStorage.getItem("arrayID");
-            let id = "assasin"
-            arrayidnoalmacen.push(new ID(id));
-            localStorage.setItem("arrayID", arrayidnoalmacen);
-        }
-    }else{
-        alert("Imposible");
-    }
-}
