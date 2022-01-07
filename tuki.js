@@ -7,7 +7,7 @@ class Personaje{
         this.archivo = archivo;
         this.origen = origen;
         this.ocupacion = ocupacion;
-        this.costo = costo
+        this.costo = precio;
     }
 }
 
@@ -17,7 +17,7 @@ class Item{
         this.archivo = archivo2
         this.origen = origen2
         this.uso = uso
-        this.costo = costo2
+        this.costo = precio2;
     }
 }
 
@@ -27,7 +27,7 @@ boton.onclick = () => {
     let dos = document.getElementById("archivo").value;
     let tres = document.getElementById("origen").value;
     let cuatro = document.getElementById("ocupacion").value;
-    let cinco = document.getElementById("costo").value;
+    let cinco = document.getElementById("precio").value;
     if (localStorage.getItem("arrayGuardado") === null) {
         console.log("Almacenaje vacio");
     }else{
@@ -55,7 +55,7 @@ boton1.onclick = () => {
     let dos = document.getElementById("archivo2").value;
     let tres = document.getElementById("origen2").value;
     let cuatro = document.getElementById("uso").value;
-    let cinco = document.getElementById("costo2").value;
+    let cinco = document.getElementById("precio2").value;
     if (localStorage.getItem("arrayGuardado2") === null) {
         console.log("Almacenaje vacio");
     }else{

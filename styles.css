@@ -220,6 +220,10 @@ body main section .listaColeccion li {
   margin-top: 2%;
 }
 
+body main section .listaColeccion li img {
+  width: 150px;
+}
+
 body main section .listaColeccion2 {
   display: -ms-grid;
   display: grid;
@@ -249,6 +253,10 @@ body main section .listaColeccion2 li {
   width: 200px;
   height: 200px;
   margin-top: 2%;
+}
+
+body main section .listaColeccion2 li img {
+  width: 150px;
 }
 
 body main div {
@@ -344,9 +352,7 @@ body main article form div {
 }
 
 body main article form div input {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 130px;
 }
 
 body main article form div .otroInput {
