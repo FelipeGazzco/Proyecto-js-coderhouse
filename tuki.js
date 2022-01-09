@@ -2,7 +2,7 @@ let array1 = [];
 let array2 = [];
 
 class Personaje{
-    constructor(nombre, archivo, origen, ocupacion, costo){
+    constructor(nombre, archivo, origen, ocupacion, precio){
         this.nombre = nombre;
         this.archivo = archivo;
         this.origen = origen;
@@ -12,7 +12,7 @@ class Personaje{
 }
 
 class Item{
-    constructor(nombre2, archivo2, origen2, uso, costo2){
+    constructor(nombre2, archivo2, origen2, uso, precio2){
         this.nombre = nombre2
         this.archivo = archivo2
         this.origen = origen2
@@ -20,6 +20,11 @@ class Item{
         this.costo = precio2;
     }
 }
+/*if (document.getElementById("nombre") === " " || document.getElementById("nombre") === "") {
+    let uno = "?";
+}else{
+    let uno = document.getElementById("nombre").value;
+}*/
 
 let boton = document.getElementById("terminarPersonaje");
 boton.onclick = () => {
